@@ -1,0 +1,74 @@
+<!-- form submission using get method -->
+form_handling_get.php
+<html>
+<body>
+<form name="f1" method="get" action="getread.php">
+User Name : <input type="text" name="uname"><br>
+Mobile No : <input type="text" name="no"><br>
+Department :  
+<Select name="s1">
+<option value="CSE" > CSE </option>
+<option value="ECE" > ECE </option>
+<option value="EEE" > EEE </option>
+</select>
+<input type="submit" name="send" value="SUBMIT">
+</form>
+</body>
+getread.php
+<html>
+<body>
+<br><br>   Welcome : <?php echo $_GET["uname"]; ?><br>
+ Your Number is : <?php echo $_GET["no"]; ?><br>
+ Branch selected : <?php echo $_GET["s1"]; ?>
+</body></html> <!—form submission using post method à
+form_handling_post.php
+<html>
+<body>
+<form name="f1" method="post" action="postread.php">
+User Name : <input type="text" name="uname"><br>
+Mobile No : <input type="text" name="no"><br>
+Department :  
+<Select name="s1">
+<option value="CSE" > CSE </option>
+<option value="ECE" > ECE </option>
+<option value="EEE" > EEE </option>
+</select></br>
+<input type="submit" name="send" value="SUBMIT">
+</form>
+</body>
+</html>
+
+<!-- retrieving data from form using $_POST method -->
+postread.php
+<html>
+<body>
+<br><br>   Welcome : <?php echo $_POST["uname"]; ?><br>
+ Your Number is : <?php echo $_POST["no"]; ?><br>
+ Branch selected : <?php echo $_POST["s1"]; ?>
+</body></html>
+<!-- retrieving data from form using $_REQUEST for both get and post requests -->
+form_handling_request.php
+<html>
+<body>
+<form name="f1" method="post" action="reqread.php">
+User Name : <input type="text" name="uname"><br>
+Mobile No : <input type="text" name="no"><br>
+Department :  
+<Select name="s1">
+<option value="CSE" > CSE </option>
+<option value="ECE" > ECE </option>
+<option value="EEE" > EEE </option>
+</select></br>
+<input type="submit" name="send" value="SUBMIT">
+</form>
+</body>
+</html>
+reqread.php
+
+<html>
+<body>
+<br><br> Welcome : <?php echo $_REQUEST["uname"]; ?>
+<br> Your Number is : <?php echo $_REQUEST["no"]; ?><br>
+ Branch selected : <?php echo $_REQUEST["s1"]; ?>
+</body>
+</html>
